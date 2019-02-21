@@ -49,7 +49,7 @@ else
                         <td>@item.Id</td>
                         <td>@item.Title</td>
                         <td>@item.Description</td>
-                        <td><button>Remove</button></td>
+                        <td><button class="btn btn-danger" onclick=@(() => DeleteItem())>Remove</button></td>
                     </tr>
                 }
             </tbody>
@@ -80,5 +80,10 @@ else
 
         items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
         this.StateHasChanged();
+    }
+
+    async void DeleteItem()
+    {
+        //var response = await Http.DeleteAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json"));
     }
 }
