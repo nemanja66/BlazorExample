@@ -16,11 +16,11 @@ else
 
         <div class="input-group mb-3">
             <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
-                   bind="@currentItem.Title" />
+                   bind="@currentItem.Title"/>
         </div>
         <div class="input-group mb-3">
             <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
-                   bind="@currentItem.Description" />
+                   bind="@currentItem.Description"/>
         </div>
         <div>
             <button class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
@@ -34,23 +34,22 @@ else
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Id</th>
                     <th scope="col">Title</th>
                     <th scope="col">Decription</th>
                     <th scope="col">Remove</th>
                 </tr>
             </thead>
             <tbody>
-                @{int i = 0;}
+                @{int i = 1;}
                 @foreach (var item in items)
                 {
                     <tr>
                         <th scope="row">@i</th>
-                        <td>@item.Id</td>
                         <td>@item.Title</td>
                         <td>@item.Description</td>
-                        <td><button class="btn btn-danger" onclick=@(() => DeleteItem())>Remove</button></td>
+                        <td><button class="btn btn-danger" onclick=@(() => DeleteItem(item.Id))>Remove</button></td>
                     </tr>
+                    i++;
                 }
             </tbody>
         </table>
@@ -68,7 +67,20 @@ else
 
     async void CreateItem()
     {
-        var response = await Http.PostAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json"));
+        HandleError(await Http.PostAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json")));
+
+        RefreshView();
+    }
+
+    async void DeleteItem(int id)
+    {
+        HandleError(await Http.DeleteAsync($"api/todo/items/{id}"));
+
+        RefreshView();
+    }
+
+    void HandleError(HttpResponseMessage response)
+    {
         try
         {
             response.EnsureSuccessStatusCode();
@@ -77,13 +89,13 @@ else
         {
             Console.Write(hre.StackTrace);
         }
-
-        items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
-        this.StateHasChanged();
     }
 
-    async void DeleteItem()
+    async void RefreshView()
     {
-        //var response = await Http.DeleteAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json"));
+        items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
+        currentItem = new ToDoItem();
+
+        this.StateHasChanged();
     }
 }

@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\**" />
+    <Content Remove="Model\**" />
+    <EmbeddedResource Remove="Model\**" />
+    <None Remove="Model\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.8.0-preview-19104-04" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Server" Version="3.0.0-preview-19075-0444" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview-19075-0444" />
@@ -14,10 +21,6 @@
   <ItemGroup>
     <ProjectReference Include="..\WebApplicationBlazor.Client\WebApplicationBlazor.Client.csproj" />
     <ProjectReference Include="..\WebApplicationBlazor.Shared\WebApplicationBlazor.Shared.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Model\" />
   </ItemGroup>
 
 </Project>

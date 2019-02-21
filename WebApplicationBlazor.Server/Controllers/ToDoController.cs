@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using WebApplicationBlazor.Shared;
-using System.Threading.Tasks;
 
 namespace WebApplicationBlazor.Server.Controllers
 {
@@ -23,15 +23,27 @@ namespace WebApplicationBlazor.Server.Controllers
         [HttpPost("[action]")]
         public ActionResult<ToDoItem> Items([FromBody] ToDoItem toDoItem)
         {
+            var currentId = toDoItems.Any() ? toDoItems.Max(x => x.Id) : 0;
+            toDoItem.Id = currentId + 1;
             toDoItems.Add(toDoItem);
 
             return Ok(toDoItem);
         }
 
-        [HttpDelete("[action]")]
-        public void Items(int id)
+        [HttpDelete("[action]/{id}")]
+        public ActionResult Items(int id)
         {
-            toDoItems.Remove(toDoItems.First(x => x.Id == id));
+            try
+            {
+                toDoItems.Remove(toDoItems.First(x => x.Id == id));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+
+            return Ok();
         }
     }
 }
