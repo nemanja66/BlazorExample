@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using WebApplicationBlazor.Shared;
+using System.Threading.Tasks;
 
 namespace WebApplicationBlazor.Server.Controllers
 {
     [Route("api/[controller]")]
     public class ToDoController : Controller
     {
-        private List<ToDoItem> toDoItems = new List<ToDoItem>
+        static List<ToDoItem> toDoItems = new List<ToDoItem>
         {
             new ToDoItem(){ Id = 1, Title = "Analyze story", Description="Do structural analysis of user story 1"}
         };
@@ -20,9 +21,11 @@ namespace WebApplicationBlazor.Server.Controllers
         }
 
         [HttpPost("[action]")]
-        public void Items(ToDoItem toDoItem)
+        public async Task<ActionResult<ToDoItem>> Items([FromBody] ToDoItem toDoItem)
         {
-            this.toDoItems.Add(toDoItem);
+            toDoItems.Add(toDoItem);
+
+            return CreatedAtAction("Items post", toDoItem);
         }
 
         [HttpDelete("[action]")]

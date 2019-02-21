@@ -13,13 +13,15 @@ else
 <div>
 
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title" value="@currentItem.Title">
+        <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
+               bind="@currentItem.Title"/>
     </div>
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc" value="@currentItem.Description">
+        <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
+               bind="@currentItem.Description"/>
     </div>
     <div>
-        <button  class="btn btn-primary" onclick=@(() => CreateItem(currentItem))>Add</button>
+        <button  class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
     </div>
 </div>
 
@@ -56,15 +58,29 @@ else
 
 @functions {
     ToDoItem[] items;
-    ToDoItem currentItem;
+    ToDoItem currentItem = new ToDoItem();
 
     protected override async Task OnInitAsync()
     {
         items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
     }
 
-    void CreateItem(ToDoItem item)
+
+    async void CreateItem()
     {
-        //Console.Write($"{item.Title} {item.Description}");
+        try
+        {
+            await Http.PostJsonAsync<ToDoItem>("api/todo/items", currentItem);
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine("BLA!!!");
+            Console.Write(e.StackTrace);
+        }
+        finally
+        {
+            items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
+            this.StateHasChanged();
+        }
     }
 }
