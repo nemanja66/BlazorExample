@@ -1,0 +1,9 @@
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\bin\Debug\netstandard2.0\WebApplicationBlazor.Shared.deps.json
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\bin\Debug\netstandard2.0\WebApplicationBlazor.Shared.dll
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\bin\Debug\netstandard2.0\WebApplicationBlazor.Shared.pdb
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.csprojAssemblyReference.cache
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.csproj.CoreCompileInputs.cache
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.AssemblyInfoInputs.cache
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.AssemblyInfo.cs
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.dll
+C:\Users\CD_PC-110\source\repos\WebApplicationBlazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.pdb
