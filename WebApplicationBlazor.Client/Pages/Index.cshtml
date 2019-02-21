@@ -1,5 +1,7 @@
 ﻿@page "/"
 @using WebApplicationBlazor.Shared
+@using Newtonsoft.Json
+@using System.Text
 @inject HttpClient Http
 
 <h1>To Do List</h1>
@@ -10,51 +12,50 @@
 }
 else
 {
-<div>
-
-    <div class="input-group mb-3">
-        <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
-               bind="@currentItem.Title"/>
-    </div>
-    <div class="input-group mb-3">
-        <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
-               bind="@currentItem.Description"/>
-    </div>
     <div>
-        <button  class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
+
+        <div class="input-group mb-3">
+            <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
+                   bind="@currentItem.Title" />
+        </div>
+        <div class="input-group mb-3">
+            <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
+                   bind="@currentItem.Description" />
+        </div>
+        <div>
+            <button class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
+        </div>
     </div>
-</div>
 
-<div>
-    <h2>Need to be done:</h2>
+    <div>
+        <h2>Need to be done:</h2>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Id</th>
-                <th scope="col">Title</th>
-                <th scope="col">Decription</th>
-                <th scope="col">Remove</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{int i = 0;}
-            @foreach (var item in items)
-            {
-            <tr>
-                <th scope="row">@i</th>
-                <td>@item.Id</td>
-                <td>@item.Title</td>
-                <td>@item.Description</td>
-                <td><button>Remove</button></td>
-            </tr>
-            }
-        </tbody>
-    </table>
-</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Decription</th>
+                    <th scope="col">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{int i = 0;}
+                @foreach (var item in items)
+                {
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@item.Id</td>
+                        <td>@item.Title</td>
+                        <td>@item.Description</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
-
 
 @functions {
     ToDoItem[] items;
@@ -65,22 +66,19 @@ else
         items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
     }
 
-
     async void CreateItem()
     {
+        var response = await Http.PostAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json"));
         try
         {
-            await Http.PostJsonAsync<ToDoItem>("api/todo/items", currentItem);
+            response.EnsureSuccessStatusCode();
         }
-        catch(Exception e)
+        catch (HttpRequestException hre)
         {
-            Console.WriteLine("BLA!!!");
-            Console.Write(e.StackTrace);
+            Console.Write(hre.StackTrace);
         }
-        finally
-        {
-            items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
-            this.StateHasChanged();
-        }
+
+        items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
+        this.StateHasChanged();
     }
 }

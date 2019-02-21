@@ -137,6 +137,15 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "WebApplicationBlazor.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -664,6 +673,45 @@
         "netstandard.library.nuspec"
       ]
     },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
     "WebApplicationBlazor.Shared/1.0.0": {
       "type": "project",
       "path": "../WebApplicationBlazor.Shared/WebApplicationBlazor.Shared.csproj",
@@ -675,27 +723,28 @@
       "Microsoft.AspNetCore.Blazor >= 0.8.0-preview-19104-04",
       "Microsoft.AspNetCore.Blazor.Build >= 0.8.0-preview-19104-04",
       "NETStandard.Library >= 2.0.3",
+      "Newtonsoft.Json >= 12.0.1",
       "WebApplicationBlazor.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CD_PC-110\\.nuget\\packages\\": {},
+    "C:\\Users\\beron\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
+      "projectUniqueName": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
       "projectName": "WebApplicationBlazor.Client",
-      "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
-      "packagesPath": "C:\\Users\\CD_PC-110\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\obj\\",
+      "projectPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
+      "packagesPath": "C:\\Users\\beron\\.nuget\\packages\\",
+      "outputPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\CD_PC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beron\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -703,7 +752,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://dev-tfs.dev-louis.de:5000/louis": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
         "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
@@ -712,8 +760,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
-              "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
+            "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
+              "projectPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
             }
           }
         }
@@ -741,6 +789,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.1, )"
           }
         },
         "imports": [

@@ -21,11 +21,11 @@ namespace WebApplicationBlazor.Server.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<ActionResult<ToDoItem>> Items([FromBody] ToDoItem toDoItem)
+        public ActionResult<ToDoItem> Items([FromBody] ToDoItem toDoItem)
         {
             toDoItems.Add(toDoItem);
 
-            return CreatedAtAction("Items post", toDoItem);
+            return Ok(toDoItem);
         }
 
         [HttpDelete("[action]")]

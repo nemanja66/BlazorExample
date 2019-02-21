@@ -1010,6 +1010,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.AspNetCore.Blazor": "0.8.0-preview-19104-04",
+          "Newtonsoft.Json": "12.0.1",
           "WebApplicationBlazor.Shared": "1.0.0"
         },
         "compile": {
@@ -4108,23 +4109,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CD_PC-110\\.nuget\\packages\\": {},
+    "C:\\Users\\beron\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
+      "projectUniqueName": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
       "projectName": "WebApplicationBlazor.Server",
-      "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
-      "packagesPath": "C:\\Users\\CD_PC-110\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\obj\\",
+      "projectPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
+      "packagesPath": "C:\\Users\\beron\\.nuget\\packages\\",
+      "outputPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\CD_PC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\beron\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4132,7 +4133,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://dev-tfs.dev-louis.de:5000/louis": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
         "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
@@ -4141,11 +4141,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj": {
-              "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj"
+            "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj": {
+              "projectPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj"
             },
-            "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
-              "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
+            "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
+              "projectPath": "E:\\projects\\blazor\\BlazorExample\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
             }
           }
         }

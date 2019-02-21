@@ -16,3 +16,11 @@ C:\Dusko\Learning\Blazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\We
 C:\Dusko\Learning\Blazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.AssemblyInfo.cs
 C:\Dusko\Learning\Blazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.dll
 C:\Dusko\Learning\Blazor\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.pdb
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\bin\Debug\netstandard2.0\WebApplicationBlazor.Shared.deps.json
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\bin\Debug\netstandard2.0\WebApplicationBlazor.Shared.dll
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\bin\Debug\netstandard2.0\WebApplicationBlazor.Shared.pdb
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.csproj.CoreCompileInputs.cache
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.AssemblyInfoInputs.cache
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.AssemblyInfo.cs
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.dll
+E:\projects\blazor\BlazorExample\WebApplicationBlazor.Shared\obj\Debug\netstandard2.0\WebApplicationBlazor.Shared.pdb
