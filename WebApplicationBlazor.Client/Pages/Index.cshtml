@@ -1,9 +1,70 @@
 ﻿@page "/"
+@using WebApplicationBlazor.Shared
+@inject HttpClient Http
 
-<h1>Hello, world!</h1>
+<h1>To Do List</h1>
 
-Welcome to your new app.
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+<div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title" value="@currentItem.Title">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc" value="@currentItem.Description">
+    </div>
+    <div>
+        <button  class="btn btn-primary" onclick=@(() => CreateItem(currentItem))>Add</button>
+    </div>
+</div>
 
-<Counter IncrementAmount="10"/>
+<div>
+    <h2>Need to be done:</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Title</th>
+                <th scope="col">Decription</th>
+                <th scope="col">Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int i = 0;}
+            @foreach (var item in items)
+            {
+            <tr>
+                <th scope="row">@i</th>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td><button>Remove</button></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}
+
+
+@functions {
+    ToDoItem[] items;
+    ToDoItem currentItem;
+
+    protected override async Task OnInitAsync()
+    {
+        items = await Http.GetJsonAsync<ToDoItem[]>("api/todo/items");
+    }
+
+    void CreateItem(ToDoItem item)
+    {
+        //Console.Write($"{item.Title} {item.Description}");
+    }
+}

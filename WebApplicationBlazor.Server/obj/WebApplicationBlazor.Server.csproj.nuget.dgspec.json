@@ -1,31 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj": {}
+    "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj": {
+    "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
+        "projectUniqueName": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
         "projectName": "WebApplicationBlazor.Client",
-        "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
-        "packagesPath": "C:\\Users\\CD_PC-110\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\obj\\",
+        "projectPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj",
+        "packagesPath": "C:\\Users\\CDPC-110\\.nuget\\packages\\",
+        "outputPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\CD_PC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CDPC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Dusko\\Projects\\Louis\\Repos\\LIB.Net\\Louis Framework\\Builds\\Release\\x86": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "http://dev-tfs.dev-louis.de:5000/louis": {},
+          "http://dev-tfs.dev-louis.de:5000/public": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
           "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
@@ -34,8 +36,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
-                "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
+              "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
+                "projectPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
               }
             }
           }
@@ -73,28 +75,30 @@
         }
       }
     },
-    "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj": {
+    "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
+        "projectUniqueName": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
         "projectName": "WebApplicationBlazor.Server",
-        "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
-        "packagesPath": "C:\\Users\\CD_PC-110\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Server\\obj\\",
+        "projectPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Server\\WebApplicationBlazor.Server.csproj",
+        "packagesPath": "C:\\Users\\CDPC-110\\.nuget\\packages\\",
+        "outputPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\CD_PC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CDPC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Dusko\\Projects\\Louis\\Repos\\LIB.Net\\Louis Framework\\Builds\\Release\\x86": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "http://dev-tfs.dev-louis.de:5000/louis": {},
+          "http://dev-tfs.dev-louis.de:5000/public": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
           "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
@@ -103,11 +107,11 @@
         "frameworks": {
           "netcoreapp3.0": {
             "projectReferences": {
-              "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj": {
-                "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj"
+              "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj": {
+                "projectPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Client\\WebApplicationBlazor.Client.csproj"
               },
-              "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
-                "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
+              "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
+                "projectPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj"
               }
             }
           }
@@ -168,28 +172,30 @@
         }
       }
     },
-    "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
+    "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj",
+        "projectUniqueName": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj",
         "projectName": "WebApplicationBlazor.Shared",
-        "projectPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj",
-        "packagesPath": "C:\\Users\\CD_PC-110\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CD_PC-110\\source\\repos\\WebApplicationBlazor\\WebApplicationBlazor.Shared\\obj\\",
+        "projectPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\WebApplicationBlazor.Shared.csproj",
+        "packagesPath": "C:\\Users\\CDPC-110\\.nuget\\packages\\",
+        "outputPath": "C:\\Dusko\\Learning\\Blazor\\WebApplicationBlazor.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\CD_PC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\CDPC-110\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Dusko\\Projects\\Louis\\Repos\\LIB.Net\\Louis Framework\\Builds\\Release\\x86": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "http://dev-tfs.dev-louis.de:5000/louis": {},
+          "http://dev-tfs.dev-louis.de:5000/public": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
           "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},

@@ -16,4 +16,8 @@
     <ProjectReference Include="..\WebApplicationBlazor.Shared\WebApplicationBlazor.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>

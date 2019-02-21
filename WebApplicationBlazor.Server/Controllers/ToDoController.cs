@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using WebApplicationBlazor.Server.Model;
+using WebApplicationBlazor.Shared;
 
 namespace WebApplicationBlazor.Server.Controllers
 {
@@ -10,6 +10,7 @@ namespace WebApplicationBlazor.Server.Controllers
     {
         private List<ToDoItem> toDoItems = new List<ToDoItem>
         {
+            new ToDoItem(){ Id = 1, Title = "Analyze story", Description="Do structural analysis of user story 1"}
         };
 
         [HttpGet("[action]")]
