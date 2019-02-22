@@ -7,14 +7,6 @@ namespace WebApplicationBlazor.Shared
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public string IsValid()
-        {
-            if (string.IsNullOrEmpty(Title))
-                return "Title";
-            else if (string.IsNullOrEmpty(Description))
-                return "Description";
-            else return string.Empty;
-        }
         public DateTime DueDate { get; private set; }
 
         private int hours;
@@ -26,6 +18,16 @@ namespace WebApplicationBlazor.Shared
                 hours = value;
                 DueDate = DateTime.Now.AddHours(hours);
             }
+        }
+        public string IsValid()
+        {
+            if (string.IsNullOrEmpty(Title))
+                return "Title";
+            else if (string.IsNullOrEmpty(Description))
+                return "Description";
+            else if (hours <= 0)
+                return "Hours";
+            else return string.Empty;
         }
     }
 }

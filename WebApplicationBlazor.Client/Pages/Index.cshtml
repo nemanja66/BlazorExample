@@ -104,7 +104,7 @@ else
         var isValid = currentItem.IsValid();
         if (isValid != string.Empty)
         {
-            await JSRuntime.Current.InvokeAsync<bool>("alert", string.Format("The field {0} is required!", isValid));
+            await JSRuntime.Current.InvokeAsync<bool>("alert", GenerateErrorMessage(isValid));
         }
 
         HandleError(await Http.PostAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json")));
@@ -146,5 +146,13 @@ else
         DeleteId = id;
 
         await JSRuntime.Current.InvokeAsync<bool>("toDoInterop.confirmDelete", title);
+    }
+
+    string GenerateErrorMessage(string propertyName)
+    {
+        if (propertyName == "Hours")
+            return "Hours value must be greater than zero!";
+        else
+            return string.Format("The field {0} is required!", propertyName);
     }
 }
