@@ -23,6 +23,9 @@ namespace WebApplicationBlazor.Server.Controllers
         [HttpPost("[action]")]
         public ActionResult<ToDoItem> Items([FromBody] ToDoItem toDoItem)
         {
+            if (toDoItem.IsValid() != string.Empty)
+                return BadRequest(toDoItem);
+
             var currentId = toDoItems.Any() ? toDoItems.Max(x => x.Id) : 0;
             toDoItem.Id = currentId + 1;
             toDoItems.Add(toDoItem);

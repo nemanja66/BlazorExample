@@ -95,6 +95,12 @@ else
 
     async void CreateItem()
     {
+        var isValid = currentItem.IsValid();
+        if (isValid != string.Empty)
+        {
+            await JSRuntime.Current.InvokeAsync<bool>("alert", string.Format("The field {0} is required!", isValid));
+        }
+
         HandleError(await Http.PostAsync("api/todo/items", new StringContent(JsonConvert.SerializeObject(currentItem), Encoding.UTF8, "application/json")));
 
         RefreshView();
