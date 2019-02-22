@@ -16,11 +16,11 @@ else
 
         <div class="input-group mb-3">
             <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
-                   bind="@currentItem.Title"/>
+                   bind="@currentItem.Title" />
         </div>
         <div class="input-group mb-3">
             <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
-                   bind="@currentItem.Description"/>
+                   bind="@currentItem.Description" />
         </div>
         <div>
             <button class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
@@ -47,18 +47,46 @@ else
                         <th scope="row">@i</th>
                         <td>@item.Title</td>
                         <td>@item.Description</td>
-                        <td><button class="btn btn-danger" onclick=@(() => DeleteItem(item.Id))>Remove</button></td>
+                        <td><button class="btn btn-danger" onclick=@(() => ConfirmDelete(item.Id, item.Title))>Remove</button></td>
                     </tr>
                     i++;
                 }
             </tbody>
         </table>
     </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm delete</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <input type="hidden" id="toDoToDeleteField" bind=@DeleteId />
+                    Are you sure you want to delete item <span id="toDoTitleField"></span>?
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick=@(() => DeleteItem(DeleteId))>Delete</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 }
 
 @functions {
     ToDoItem[] items;
     ToDoItem currentItem = new ToDoItem();
+    int DeleteId { get; set; } = 0;
 
     protected override async Task OnInitAsync()
     {
@@ -75,6 +103,8 @@ else
     async void DeleteItem(int id)
     {
         HandleError(await Http.DeleteAsync($"api/todo/items/{id}"));
+
+        await JSRuntime.Current.InvokeAsync<bool>("toDoInterop.hideDeleteDialog");
 
         RefreshView();
     }
@@ -97,5 +127,12 @@ else
         currentItem = new ToDoItem();
 
         this.StateHasChanged();
+    }
+
+    async void ConfirmDelete(int id, string title)
+    {
+        DeleteId = id;
+
+        await JSRuntime.Current.InvokeAsync<bool>("toDoInterop.confirmDelete", title);
     }
 }
