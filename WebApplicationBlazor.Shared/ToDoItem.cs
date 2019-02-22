@@ -1,4 +1,6 @@
-﻿namespace WebApplicationBlazor.Shared
+﻿using System;
+
+namespace WebApplicationBlazor.Shared
 {
     public class ToDoItem
     {
@@ -12,6 +14,18 @@
             else if (string.IsNullOrEmpty(Description))
                 return "Description";
             else return string.Empty;
+        }
+        public DateTime DueDate { get; private set; }
+
+        private int hours;
+        public int Hours
+        {
+            get { return hours; }
+            set
+            {
+                hours = value;
+                DueDate = DateTime.Now.AddHours(hours);
+            }
         }
     }
 }

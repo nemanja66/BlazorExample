@@ -11,7 +11,7 @@ namespace WebApplicationBlazor.Server.Controllers
     {
         static List<ToDoItem> toDoItems = new List<ToDoItem>
         {
-            new ToDoItem(){ Id = 1, Title = "Analyze story", Description="Do structural analysis of user story 1"}
+            new ToDoItem(){ Id = 1, Title = "Analyze story", Description="Do structural analysis of user story 1", Hours = 3}
         };
 
         [HttpGet("[action]")]

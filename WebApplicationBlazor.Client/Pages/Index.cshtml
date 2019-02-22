@@ -12,20 +12,24 @@
 }
 else
 {
-    <div>
+<div>
 
-        <div class="input-group mb-3">
-            <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
-                   bind="@currentItem.Title" />
-        </div>
-        <div class="input-group mb-3">
-            <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
-                   bind="@currentItem.Description" />
-        </div>
-        <div>
-            <button class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
-        </div>
+    <div class="input-group mb-3">
+        <input for="Title" type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="input_title"
+               bind="@currentItem.Title" />
     </div>
+    <div class="input-group mb-3">
+        <input for="Description" type="text" class="form-control" placeholder="Description" aria-label="Description" aria-describedby="input_desc"
+               bind="@currentItem.Description" />
+    </div>
+    <div class="input-group mb-3">
+        <input for="Hour" type="text" class="form-control" placeholder="Done in hours" aria-label="DueIn" aria-describedby="input_dueIn"
+               bind="@currentItem.Hours" />
+    </div>
+    <div>
+        <button class="btn btn-primary" onclick=@(() => CreateItem())>Add</button>
+    </div>
+</div>
 
     <div>
         <h2>Need to be done:</h2>
@@ -36,6 +40,7 @@ else
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
                     <th scope="col">Decription</th>
+                    <th scope="col">Seconds remaining</th>
                     <th scope="col">Remove</th>
                 </tr>
             </thead>
@@ -47,6 +52,7 @@ else
                         <th scope="row">@i</th>
                         <td>@item.Title</td>
                         <td>@item.Description</td>
+                        <td><Timer DueDate="@item.DueDate"></Timer></td>
                         <td><button class="btn btn-danger" onclick=@(() => ConfirmDelete(item.Id, item.Title))>Remove</button></td>
                     </tr>
                     i++;
